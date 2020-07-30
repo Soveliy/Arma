@@ -1,4 +1,4 @@
-
+$red: #ff0000;
 $black: #3f3f3f;
 $white: #FFFFFF;
 $grey: #acacac;
@@ -54,7 +54,7 @@ $resolution4:180;
 //   }
 
 @mixin for-lg {
-    @media (max-width: 1200px) { @content; }
+    @media (max-width: 1250px) { @content; }
   }
 //   @mixin for-lit-desktop {
 //     @media (max-width: 1050px) { @content; }
