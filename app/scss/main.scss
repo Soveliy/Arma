@@ -251,6 +251,11 @@ button{
     z-index: 9990;
     box-sizing: border-box;
    }
+   .container{
+       @include for-md(){
+           padding: 0;
+       }
+   }
     &--red{
         padding-bottom: 43px;
         background-color: $red;
@@ -268,7 +273,7 @@ button{
             }
 
             li + li{
-                margin-left: 40px;
+                margin-left: 50px;
                 @include for-md(){
                     margin-left: 0;
                 }
@@ -279,6 +284,9 @@ button{
             &:hover{
                 text-shadow: 0 0 2px $white, 0 0 2px $white, 0 0 2px $white;
             }
+        }
+        .main-menu__list{
+            margin-top: 35px;
         }
         .header__phones{
             display: flex;
@@ -303,6 +311,10 @@ button{
         .header__basket{
             margin-left: auto;
             position: relative;
+            border: none;
+            padding: 0;
+            outline: none;
+            background-color: transparent;
 
             &-value{
                 width: 18px;
@@ -1493,6 +1505,12 @@ button{
         @include for-md{
             margin-top: 230px;
         }
+    }
+    .content_block{
+        margin-top: 30px;
+       p,b,i,a{
+        color: #acacac;
+       }
     }
     .gallery-thumbs{
         @include for-xxl{

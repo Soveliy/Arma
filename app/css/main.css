@@ -5086,6 +5086,12 @@ button {
   }
 }
 
+@media (max-width: 1024px) {
+  .header .container {
+    padding: 0;
+  }
+}
+
 .header--red {
   padding-bottom: 43px;
   background-color: #ff0000;
@@ -5111,7 +5117,7 @@ button {
 }
 
 .header--red .main-menu li + li {
-  margin-left: 40px;
+  margin-left: 50px;
 }
 
 @media (max-width: 1024px) {
@@ -5126,6 +5132,10 @@ button {
 
 .header--red .main-menu__link:hover {
   text-shadow: 0 0 2px #FFFFFF, 0 0 2px #FFFFFF, 0 0 2px #FFFFFF;
+}
+
+.header--red .main-menu__list {
+  margin-top: 35px;
 }
 
 .header--red .header__phones {
@@ -5152,6 +5162,10 @@ button {
 .header--red .header__basket {
   margin-left: auto;
   position: relative;
+  border: none;
+  padding: 0;
+  outline: none;
+  background-color: transparent;
 }
 
 .header--red .header__basket-value {
@@ -6698,6 +6712,14 @@ button {
   .card__container {
     margin-top: 230px;
   }
+}
+
+.card .content_block {
+  margin-top: 30px;
+}
+
+.card .content_block p, .card .content_block b, .card .content_block i, .card .content_block a {
+  color: #acacac;
 }
 
 @media (max-width: 1600px) {
