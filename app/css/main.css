@@ -5660,6 +5660,12 @@ button {
   }
 }
 
+@media (max-width: 1250px) {
+  .catalog-item.list .catalog-item__button {
+    margin-left: 40px;
+  }
+}
+
 @media (max-width: 768px) {
   .catalog-item.list .catalog-item__button {
     padding: 8px 0;
@@ -5824,6 +5830,7 @@ button {
 
 @media (max-width: 1023px) {
   .card__side-img-block {
+    max-width: 100px;
     width: 100%;
     height: 100px;
   }
