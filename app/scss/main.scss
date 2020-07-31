@@ -377,8 +377,11 @@ button{
     }
 }
 .features{
-    
+    position: relative;
+        overflow: hidden;
     &__row{
+        position: relative;
+        overflow: hidden;
         margin-top: 90px;
         display: flex;
         flex-wrap: wrap;
@@ -495,16 +498,39 @@ button{
 }
 .catalog{
     &__slider{
+        height: 614px;
+        background: url(../images/calatog-sldier.png) no-repeat center 370px;
+        .swiper-wrapper{
+            align-items: center;
+        }
         .swiper-slide{
             transition: .3s;
+        }
+        a{
+            display: block;
+            width: 100%;
+            height: 404px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: .3s;
+
+            img{
+                max-width: 100%;
+                max-height: 100%;
+                transition: .3s;
+            }
+        }
+        .swiper-slide.swiper-slide-active{
+            a{
+                height: 614px;
+            }
         }
         // .swiper-slide{
            
            
         // }
-        .swiper-slide-active.js-active{
-            transform: translateY(50px) scale(1.2);
-        }
+       
         
     }
 }
