@@ -681,7 +681,6 @@ button{
         text-transform: uppercase;
         color: $white;
         transition: .3s;
-        
         &:hover{
             background-color: $red;
         }
@@ -695,7 +694,6 @@ button{
         }
         @include for-md-mob{
             margin-top: 15px;
-
         }
     }
 }
@@ -744,6 +742,9 @@ button{
         max-width: 288px;
         @include for-md{
             margin-left: auto;
+        }
+        @include for-lg{
+            margin-left: 40px;
         }
         @include for-sm{
             padding: 8px 0;
@@ -866,6 +867,7 @@ button{
         width: 94px;
         height: 127px;
         @include for-md{
+            max-width: 100px;
             width: 100%;
             height: 100px;
         }
