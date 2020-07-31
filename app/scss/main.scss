@@ -377,8 +377,11 @@ button{
     }
 }
 .features{
-    
+    position: relative;
+        overflow: hidden;
     &__row{
+        position: relative;
+        overflow: hidden;
         margin-top: 90px;
         display: flex;
         flex-wrap: wrap;

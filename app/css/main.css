@@ -5176,7 +5176,14 @@ button {
   color: #FFFFFF;
 }
 
+.features {
+  position: relative;
+  overflow: hidden;
+}
+
 .features__row {
+  position: relative;
+  overflow: hidden;
   margin-top: 90px;
   display: flex;
   flex-wrap: wrap;
