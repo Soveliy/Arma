@@ -1,18 +1,18 @@
 var wow = new WOW();
 new WOW().init();
 
-  $('#wrapper').fullpage({
-    autoScrolling:true,
-    scrollBar: false,
-    scrollHorizontally: true,
-    responsiveWidth: 1024,
-    responsiveHeight:768,
+//   $('#wrapper').fullpage({
+//     autoScrolling:true,
+//     scrollBar: false,
+//     scrollHorizontally: true,
+//     responsiveWidth: 1024,
+//     responsiveHeight:768,
    
-  });
+//   });
 
-$('.js-to-game').click(function () {
-  fullpage_api.moveTo(3);
-});
+// $('.js-to-game').click(function () {
+//   fullpage_api.moveTo(3);
+// });
 
   
 
@@ -40,14 +40,13 @@ var hero__bot_slider = new Swiper('.hero__slider-bot .swiper-container', {
 
 var catalog__slider = new Swiper('.catalog__slider .swiper-container', {
   slidesPerView: 3,
-  spaceBetween: 30,
+  spaceBetween: 150,
   centeredSlides: true,
+  initialSlide:1,
+  
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
   },
 });
 
-catalog__slider.on('slideChangeTransitionStart', function () {
-  $(".swiper-slide-active").addClass("js-active")
-});
