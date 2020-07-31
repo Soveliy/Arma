@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header header--main hero__header header--red">
+            <div class="container">
+                <div class="header__row">
+                    <div class="burger">
+                        <span class="rect"></span>
+                        <span class="rect"></span>
+                        <span class="rect"></span>
+                    </div>
+                    <div class="header__logo logo">
+                        <a href="/" class="logo__image" style="background-image: url(images/logo__white.png);"></a>
+                    </div>
+                    <a class="header__basket" href="#">
+                        <span class="header__basket-value">1</span>
+                        <img class="header__basket-img" src="images/basket.png" alt="">
+                    </a>
+                    <a  class="link-modal header__link-modal">заказать звонок</a>
+                    <div class="header__phones">
+                        <div class="header__phone-container">
+                            <a href="tel:+74712541881" class="header__phone-link">+7 (4712) 54-18-81
+                            </a>
+                        </div>
+                        <div class="header__phone-container">
+                            <a href="tel:+79191790770
+                            " class="header__phone-link">+7 (919) 179-07-70
+                            </a>
+                        </div>
+                    </div>
+                   
+                </div> 
+                 <nav class="header__main-menu main-menu">
+                    <ul class="main-menu__list">
+                        <li class="main-menu__list-item">
+                            <a href="#" class="main-menu__link">главная</a>
+                        </li>
+                        <li class="main-menu__list-item">
+                            <a href="#" class="main-menu__link">о компании</a>
+                        </li>
+                        <li class="main-menu__list-item">
+                            <a href="#" class="main-menu__link">каталог</a>
+                        </li>
+                        <li class="main-menu__list-item">
+                            <a href="#" class="main-menu__link">где купить</a>
+                        </li>
+                        <li class="main-menu__list-item">
+                            <a href="#" class="main-menu__link">контакты</a>
+                        </li>
+    
+                    </ul>
+                </nav>  
+            </div>
+            
+            
+            
+        </header>
+        <main class="main">
+          <div class="basket">
+              <div class="container">
+                  <h1 class="basket__title">
+                      Корзина
+                  </h1>
+                  <table class="basket__table">
+                    <tr>
+                        <td class="basket__image-container">
+                            <img src="images/basket-img.png" alt="">
+                        </td>
+                        <td class="basket__info-container">
+                           <div class="basket__info">
+                            <div class="basket__item-title">
+                                Огнебиозащита arma 
+                               </div>
+                               <p class="basket__item-desc">
+                                1 степени защиты красная 
+                               </p>
+                               <div class="basket__item-value">
+                                10 л
+                               </div>
+                           </div>
+
+
+                        </td>
+                        <td class="basket__coast">
+                            690 ₽ 
+                        </td>
+                        <td class="basket__counter">
+                            <div class="basket__counter-container">
+                                <div class="counter">
+                                    <span class="counter__minus">-</span>
+                                    <input type="text" value="1" readonly>
+                                    <span class="counter__plus">+</span>
+                                </div>
+                                <button class="basket__remove-item"></button>
+                            </div>
+                          
+                        </td>
+                       
+                    </tr>
+                  </table>
+
+                  <div class="basket__payment payment">
+                      <form action="#" class="payment__form">
+                          <div class="payment__left-side">
+                              <span class="payment__input-container">
+                                  <input type="text" class="payment__input"  name="name" placeholder="Ф.И.О.">
+                              </span>
+                              <span class="payment__input-container">
+                                <input type="text" class="payment__input numbox"  name="phone" placeholder="телефон">
+                            </span>
+                            <span class="payment__input-container">
+                                <input type="email" class="payment__input"  name="email" placeholder="e-mail">
+                            </span>
+                            <span class="payment__input-container">
+                                <input type="text" class="payment__input" name="adress" placeholder="адрес">
+                            </span>
+                          </div>
+                          <div class="payment__right-side">
+                              <label class="payment__checkbox">
+                                  <input type="checkbox">
+                                  <b></b>
+                                  <span>
+                                    согласен на обработку персональных данных <br>
+                                  <a href="#">  политика конфиденциальности</a>
+                                  </span>
+                              </label>
+                              <button class="button payment__button">
+                                оформить
+                              </button>
+                          </div>
+                      </form>
+                  </div>
+              </div>
+          </div>
+        </main>
+    </div>
+<script src="https://code.jquery.com/jquery-2.1.1.min.js" integrity="sha256-h0cGsrExGgcZtSZ/fRz4AwV+Nn6Urh/3v3jFRQ0w9dQ=" crossorigin="anonymous"></script>
+<script src="js/libs.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
