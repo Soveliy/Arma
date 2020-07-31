@@ -46,9 +46,9 @@ $resolution4:180;
 
 
 
-// @mixin for-xxl {
-//   @media (max-width: 1805px) { @content; }
-// }
+@mixin for-xxl {
+  @media (max-width: 1600px) { @content; }
+}
 // @mixin for-xl {
 //     @media (min-width: 1024px) and (max-width: 1470px) { @content; }
 //   }
