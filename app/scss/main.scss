@@ -8,15 +8,32 @@ html, body {
         overflow: initial !important;
     }
 }
-
+*{
+    outline: none;
+}
 input{
     appearance: none;
 }
 
 body{
     font-family: 'Montserrat', sans-serif;
+    outline: none;
+    width: 100%;
 }
-
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+    padding: 0;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+p{
+    margin: 0;
+}
+button{
+    cursor: pointer;
+}
 .logo{
    width: 170px;
    height: 32px;
@@ -35,9 +52,14 @@ body{
     box-sizing: border-box;
   
 }
-.container{
-    max-width: 1700px;
+.wrapper{
+    min-height: 100%;
     width: 100%;
+    // overflow: hidden;
+}
+.container{
+    max-width: 1730px;
+    padding: 0 15px;
     margin: 0 auto;
 }
 .section{
@@ -75,6 +97,32 @@ body{
 
 }
 .header{
+    &--red{
+        padding-bottom: 43px;
+        background-color: $red;
+        .main-menu{
+            width: 50%;
+            margin-left: auto;
+        }
+        .main-menu__link{
+            color: $white;
+        }
+        .header__phones{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+        .header__phone-link{
+            color: $white;
+        }
+        .header__link-modal{
+            color: $white;
+            margin-left: 60px;
+        }
+        .header__basket{
+            margin-left: auto;
+        }
+    }
     &__row{
         display: flex;
         justify-content: space-between;
@@ -481,5 +529,508 @@ body{
         // }
        
         
+    }
+}
+.catalog{
+    margin-top: 50px;
+    &__view{
+        display: flex;
+        align-items: center;
+        @include for-md{
+            justify-content: center;
+        }
+        @include for-md-mob{
+            display: none;
+        }
+    }
+    &__view-text{
+        font-size: 14px;
+        line-height: 28px;
+        color: $black;
+        text-transform: uppercase;
+    }
+    &__view-box{
+        margin-left: 25px;
+    }
+    &__view-button + &__view-button{
+        margin-left: 12px;
+    }
+    &__view-button{
+        width: 18px;
+        height: 18px;
+        border: none;
+        background-color: transparent;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        outline: none;
+        &--grid{
+            background-image: url(../images/grid-icon.png);
+        }
+        &--grid.active{
+            background-image: url(../images/grid-icon-active.png);
+        }
+        &--list{
+            background-image: url(../images/list-icon.png);
+        }
+        &--list.active{
+            background-image: url(../images/list-icon-active.png);
+        }
+    }
+    &__row{
+        display: flex;
+        margin-top: 85px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        @include for-sm{
+            margin-top: 40px;
+        }
+    }
+    &__item{
+        width: 33.333333%;
+        // padding-right: 215px;
+        margin-bottom: 83px;
+        box-sizing: border-box;
+        @include for-lg{
+            width: 50%;
+            padding-left: 6%;
+        }
+        @include for-md{
+            width: 100%;
+            padding-left: 0;
+        }
+        @include for-md-mob{
+            margin-bottom: 70px;
+        }
+    }
+
+    
+}
+.catalog-item{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    &__inner{
+        display: flex;
+        align-items: flex-start;
+
+        @include for-md{
+            margin: 0 auto;
+        }
+        @include for-md-mob{
+            flex-direction: column;
+            text-align: center;
+        }
+    }
+    &__img-block{
+        display: block;
+        width: 135px;
+        height: 183px;
+        @include for-md-mob{
+            margin: 0 auto; 
+        }
+    }
+    &__img{
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+    &__text-block{
+        margin-left: 21px;
+        @include for-md-mob{
+            margin-left: 0;
+            margin-top: 20px;  
+        }
+    }
+    &__title{
+        font-size: 30px;
+        line-height: 34px;
+        @include for-sm{
+            font-size: 24px;
+            line-height: 28px;
+        }
+    }
+    &__desc{
+        margin-top: 5px;
+        font-size: 16px;
+        line-height: 20px;
+        color: $grey;
+        @include for-sm{
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
+    &__liter{
+        margin-top: 10px;
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 700;
+        @include for-sm{
+            font-size: 14px;
+            line-height: 20px;
+        }
+        @include for-md-mob{
+            margin-top: 5px;
+        }
+        
+    }
+    &__price{
+        margin-top: 25px;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 40px;
+        @include for-sm{
+            
+            font-size: 32px;
+            line-height: 36px;
+        }
+        @include for-md-mob{
+            margin-top: 5px;
+        }
+    }
+    &__button{
+        padding: 10px 0;
+        margin-top: 27px;
+        max-width: 137px;
+        width: 100%;
+        text-align: center;
+        background-color: $red;
+        border: none;
+        background-color: #d0d0d0;
+        border-radius: 10px;
+        font-size: 11px;
+        line-height: 15px;
+        text-transform: uppercase;
+        color: $white;
+        transition: .3s;
+        
+        &:hover{
+            background-color: $red;
+        }
+        @include for-md{
+            margin: 27px auto 0;
+        }
+        @include for-sm{
+            max-width: 100%;
+            font-size: 20px;
+            line-height: 24px;
+        }
+        @include for-md-mob{
+            margin-top: 15px;
+
+        }
+    }
+}
+.catalog-item.list{
+    margin-bottom: 30px;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #d0d0d0;
+    &:last-child{
+        border-bottom: none;
+    }
+    .catalog-item__inner{
+        align-items: center;
+        width: 100%;
+        max-width: 100%;
+    }
+    .catalog-item__title{
+        br{
+            display: none;
+        }
+    }
+    .catalog-item__desc{
+        br{
+            display: none;
+        }
+    }
+    .catalog-item__text-block{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-left: 57px;
+        width: 100%;
+        @include for-md{
+            margin-left: 20px;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+    .catalog-item__button{
+        padding: 23px 0;
+        margin-left: 150px;
+        font-size: 24px;
+        line-height: 28px;
+        max-width: 288px;
+        @include for-md{
+            margin-left: auto;
+        }
+        @include for-sm{
+            padding: 8px 0;
+            font-size: 20px;
+            line-height: 24px;
+            max-width: 165px;
+        }
+    }
+}
+
+.card{
+    padding-bottom: 118px;
+    @include for-xxl{
+        padding-bottom: 278px;
+    }
+    @include for-md{
+        position: static;
+        padding: 0 20px 118px;
+    }
+    @include for-md-mob{
+        padding: 0 0 118px;
+    }
+    &__inner{
+        position: relative;
+        display: flex;
+        justify-content: start;
+        margin-top: 120px;
+        padding-right: 200px;
+        @include for-xxl{
+            height: 600px;
+            padding-right: 0;
+        }
+        @include for-md{
+            flex-direction: column;
+            height: auto;
+            margin-top: 50px;
+        }
+    }
+    &__container{
+        // max-width: 960px;
+        // padding-right: 200px;
+        width: 100%;
+        @include for-md{
+            margin-top: 230px;
+        }
+    }
+    .gallery-thumbs{
+        @include for-xxl{
+            position: absolute;
+            bottom: -200px;
+            left: 0;
+        }
+        @include for-md{
+            bottom: auto;
+            left: 50%;
+            transform: translateX(-50%);
+            top: -177px;
+            overflow: visible;
+        }
+        @include for-sm{
+            width: 100%;
+        }
+        
+        .swiper-wrapper{
+            @include for-sm{
+                display: flex;
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    }
+    .gallery-top{
+        max-width: 500px;
+        width: 100%;
+        @include for-xxl{
+            max-width: 430px;
+        }
+        @include for-md{
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+    }
+    .swiper-container{
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .swiper-wrapper{
+        @include for-md{
+            // display: flex;
+            // justify-content: center;
+        }
+    }
+    .swiper-slide{
+        cursor: pointer;
+    }
+    &__main-img-block{
+        width: 383px;
+        height: 584px;
+        display: block;
+        @include for-md{
+            margin: 0 auto;
+            height: 450px;
+            width: 100%;
+        }
+        @include for-md-mob{
+            height: 300px;
+        }
+    }
+    &__main-img{
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        @include for-md{
+            object-fit: contain;
+        }
+        
+    }
+    &__side-img-block{
+        width: 94px;
+        height: 127px;
+        @include for-md{
+            width: 100%;
+            height: 100px;
+        }
+    }
+    &__side-img{
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+    &__side-slide{
+        padding: 24px 40px;
+        width: auto !important;
+        border: 1px solid #d0d0d0;
+        border-radius: 10px;
+        @include for-md{
+            padding: 15px 30px;
+        }
+    }
+    &__side-slide + &__side-slide{
+        margin-left: 10px;
+    }
+    &__info{
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        // max-width: 750px;
+        padding-right: 230px;
+        @include for-md{
+            position: relative;
+            flex-wrap: nowrap;
+            flex-direction: row-reverse;
+            padding-right: 0;
+        }
+        @include for-md-mob{
+            flex-direction: column-reverse;
+        }
+    }
+    &__spec{
+        text-align: right;
+        @include for-xxl{
+            text-align: left;
+        }
+        
+    }
+    &__liter{
+        font-weight: 500;
+        font-size: 60px;
+        line-height: 78px;
+        color: $grey;
+        @include for-md{
+            font-size: 16px;
+            line-height: 40px;
+            font-weight: 700;
+        } 
+        &--desktop{
+            display: block;
+            @include for-md{
+                display: none;
+            } 
+        }
+        &--mobile{
+            display: none;
+            margin-left: 20px;
+            @include for-md{
+                display: inline;
+            } 
+        }
+    }
+    &__price{
+        font-weight: 700;
+        font-size: 72px;
+        line-height: 78px;
+        @include for-md{
+            margin-top: 40px;
+            font-size: 24px;
+            line-height: 28px;
+        }
+        @include for-md-mob{
+            margin-top: 0;
+        }
+    }
+    // &__desc{
+    //     
+    // }
+    &__title-box{
+        margin-top: 68px;
+        @include for-xxl{
+            width: 100%;
+        }
+        @include for-md{
+            margin-top: 40px;
+            width: auto;
+        }
+        @include for-md-mob{
+            margin-top: 0;
+        }
+    }
+    &__title{
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 28px;
+        text-transform: uppercase;
+    }
+    &__subtitle{
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 300;
+    }
+    &__text{
+        // max-width: 970px;
+        font-size: 16px;
+        line-height: 24px;
+        color: $grey;
+        span{
+            font-weight: 700;
+        }
+        p{
+            margin-top: 20px;
+        }
+    }
+    &__button{
+        position: absolute;
+        padding: 23px 0;
+        font-size: 24px;
+        line-height: 28px;
+        max-width: 288px;
+        width: 100%;
+        text-align: center;
+        background-color: $red;
+        border: none;
+        border-radius: 10px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        transition: .3s;
+        right: 0;
+        top: 0;
+        @include for-md{
+            position: relative;
+            display: block;
+            margin: 55px auto 0;
+        }
     }
 }

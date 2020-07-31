@@ -50,3 +50,41 @@ var catalog__slider = new Swiper('.catalog__slider .swiper-container', {
   },
 });
 
+catalog__slider.on('slideChangeTransitionStart', function () {
+  $(".swiper-slide-active").addClass("js-active")
+});
+
+$('.catalog__view-button').click( function () {
+  $('.catalog__view-button').removeClass('active');
+  $(this).addClass('active');
+});
+
+$('.catalog__view-button--grid').click(function(){
+  $('.catalog-item').removeClass('list');
+  $('.catalog-item').addClass('grid');
+});
+
+
+$('.catalog__view-button--list').click(function(){
+  $('.catalog-item').removeClass('grid');
+  $('.catalog-item').addClass('list');
+});
+
+var galleryThumbs = new Swiper('.gallery-thumbs', {
+  // spaceBetween: 10,
+  slidesPerView: 2,
+  freeMode: true,
+  watchSlidesVisibility: true,
+  watchSlidesProgress: true,
+});
+var galleryTop = new Swiper('.gallery-top', {
+  // spaceBetween: 10,
+  slidesPerView: 1,
+  effect: 'fade',
+  fadeEffect: {
+    crossFade: true
+  },
+  thumbs: {
+    swiper: galleryThumbs
+  }
+});
