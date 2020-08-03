@@ -4782,18 +4782,52 @@ input {
   appearance: none;
 }
 
+html, body {
+  height: 100%;
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
   outline: none;
   position: relative;
-  overflow: hidden;
   width: 100%;
+}
+
+body.fullpage {
+  overflow: hidden;
+}
+
+@media (max-width: 1024px) {
+  body.fullpage {
+    overflow: visible;
+  }
 }
 
 @media (max-width: 1024px) {
   body {
     padding-top: 112px;
   }
+}
+
+.wrapper:not(#fullpage) {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.wrapper:not(#fullpage) .header {
+  /* 0 flex-grow, 0 flex-shrink, auto flex-basis */
+  flex: 0 0 auto;
+}
+
+.wrapper:not(#fullpage) .main {
+  /* 1 flex-grow, 0 flex-shrink, auto flex-basis */
+  flex: 1 0 auto;
+}
+
+.wrapper:not(#fullpage) .footer {
+  /* 0 flex-grow, 0 flex-shrink, auto flex-basis */
+  flex: 0 0 auto;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -4857,77 +4891,6 @@ button {
 
 .burger.active .rect:nth-child(3) {
   transform: rotate(-45deg) translateX(8px) translateY(-8px);
-}
-
-/* modal */
-.arcticmodal-overlay,
-.arcticmodal-container {
-  position: fixed;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 11000;
-}
-
-.arcticmodal-container {
-  overflow: auto;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  border-collapse: collapse;
-}
-
-*:first-child + html .arcticmodal-container {
-  height: 100%;
-}
-
-.arcticmodal-container_i {
-  height: 100%;
-  margin: 0 auto;
-  width: 100%;
-}
-
-.arcticmodal-container_i2 {
-  padding: 24px;
-  margin: 0;
-  border: 0;
-  vertical-align: middle;
-}
-
-@media (max-width: 650px) {
-  .arcticmodal-container_i2 {
-    padding: 10px;
-  }
-}
-
-.arcticmodal-error {
-  padding: 20px;
-  border-radius: 10px;
-  background: #000;
-  color: #fff;
-}
-
-.b-modal {
-  position: relative;
-  max-width: 700px;
-  background-color: #FFFFFF;
-  margin: 0 auto;
-  padding: 40px 30px;
-  box-sizing: border-box;
-  border-radius: 10px;
-}
-
-.arcticmodal-close {
-  position: absolute;
-  top: 12px;
-  right: 19px;
-  background: url(../img/close.svg) no-repeat center center;
-  background-size: contain;
-  height: 25px;
-  width: 25px;
-  z-index: 20;
-  cursor: pointer;
 }
 
 .logo {
@@ -5866,6 +5829,10 @@ button {
   .where-to-buy__info-item-container {
     padding-right: 0;
   }
+}
+
+.info-item {
+  cursor: pointer;
 }
 
 @media (max-width: 1024px) {
@@ -7656,6 +7623,10 @@ button {
   max-width: 1250px;
 }
 
+.card-modal .gallery-thumbs {
+  width: 371px;
+}
+
 @media (max-width: 380px) {
   .card-modal {
     max-width: 300px;
@@ -7743,10 +7714,11 @@ button {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  margin: 20px 0;
+  margin: 20px 0 40px;
 }
 
 .card-modal .card__button {
+  cursor: pointer;
   position: static;
 }
 
@@ -7765,7 +7737,6 @@ button {
   justify-content: space-between;
   width: 100%;
   margin-top: 0;
-  margin-bottom: 20px;
 }
 
 @media (max-width: 768px) {
@@ -7783,6 +7754,10 @@ button {
   .card-modal .card__liter {
     margin-top: 10px;
   }
+}
+
+.card-modal .content_block {
+  margin-top: 15px;
 }
 
 .card-modal .card__button--mobile {
@@ -7916,7 +7891,7 @@ button {
   /*width: 100%;
   max-width: 550px;*/
   margin: 0 auto;
-  width: 560px;
+  width: 510px;
   background-color: #ffffff;
   border-radius: 6px;
   -webkit-box-sizing: border-box;
@@ -8130,7 +8105,7 @@ button {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  background-color: #e5ba3c;
+  background-color: #ff0000;
   text-align: center;
   justify-content: center;
   align-items: center;

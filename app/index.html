@@ -7,11 +7,11 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
-<body>
+<body class="fullpage">
    
    
-   <div id="wrapper" class="wrapper">
-        <section class="hero section" id="hero">
+   <div id="fullpage" class="wrapper">
+        <section class="hero section">
             <div class="container">
              <div class="hero__row">
                  <div class="hero__left">
@@ -39,7 +39,7 @@
                              </div>
                          </div>
                          
-                         <nav class="header__main-menu main-menu">
+                         <nav class="header__main-menu main-menu " id="menu">
                              <ul class="main-menu__list">
                                  <li class="main-menu__list-item">
                                      <a href="#hero" class="main-menu__link">главная</a>
@@ -180,7 +180,7 @@
              </div>
             </div>
         </section>
-        <section class="section about" id="about" style="background-image: url(images/bg/about.jpg) ">
+        <section class="section about" style="background-image: url(images/bg/about.jpg) ">
             <div class="container">
               
                 <h2 class="section-title section-title--white about__section-title" >
@@ -302,7 +302,7 @@
                 </div>
             </div>
         </section>
-        <section class="catalog section" id="catalog">
+        <section class="catalog section">
             <div class="container">
                 <h2 class="section-title">
                     каталог
@@ -347,7 +347,7 @@
                 </div>
             </div>
         </section>
-        <section class="where-to-buy section" id="where-to-buy">
+        <section class="where-to-buy section">
             <div class="where-to-buy__row">
                <div class="where-to-buy__left-side">
                    <div class="section-title">
@@ -492,7 +492,7 @@
 
             </div>
         </section>
-        <section class="contacts section" id="contacts">
+        <section class="contacts section">
             <div class="container">
                 <h2 class="section-title">
                      контакты
@@ -547,6 +547,11 @@
                                 <img class="card__main-img" src="images/catalog/4.png" alt="">
                             </a>
                         </div>
+                        <div class="swiper-slide swiper-slide-next" style="width: 500px; opacity: 0; transform: translate3d(-500px, 0px, 0px);">
+                            <a class="card__main-img-block fancybox" data-fancybox="" href="images/card/side-1.png">
+                                <img class="card__main-img" src="images/catalog/4.png" alt="">
+                            </a>
+                        </div>
                     </div>
                 <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
                 <div class="card__container">
@@ -563,12 +568,17 @@
                                         <img class="card__side-img" src="images/card/side-1.png" alt="">
                                       </div>
                                 </div>
+                                <div class="swiper-slide card__side-slide swiper-slide-visible swiper-slide-next" style="width: 181px;">
+                                    <div class=" card__side-img-block">
+                                        <img class="card__side-img" src="images/card/side-1.png" alt="">
+                                      </div>
+                                </div>
                             </div>
                         <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
                         <div class="modal-values">
-                            <div class="card__price">
+                            <a href="#" class="card__price">
                                 690 ₽ 
-                            </div>
+                            </a>
                             <div class="card__button">
                                 Купить
                             </div>
@@ -622,7 +632,7 @@
 
         <div class="box_content_modal__page_block modal_callback_class">
             <div class="b-modal_close arcticmodal-close"></div>
-            <div class="h4_title_modal">Укажите ваши актуальные данные и мы отправим вам оптовый прайс лист</div>
+            <div class="h4_title_modal">Заказать звонок</div>
             <div class="form_box_faq_page_modal">
                 <div class="inner">
                     <form method="post" action="" id="modal_form_price" name="modal_form_price">

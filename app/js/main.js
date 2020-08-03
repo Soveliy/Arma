@@ -38,9 +38,9 @@ new WOW().init();
     initialize(true);
      
     function initialize(hasScrollBar){
-    $('#wrapper').fullpage({
+    $('#fullpage').fullpage({
     
-    menu: '#menu',
+    // menu: '#menu',
     responsiveHeight: 640,
     responsiveWidth: 1024,
    css3: true,
@@ -52,7 +52,7 @@ new WOW().init();
     
     navigation:false,
    
- 
+    anchors: ['hero', 'about', 'features', 'catalog', 'where-to-buy', 'contacts']
     });
     }
      
@@ -176,6 +176,7 @@ var galleryTop = new Swiper('.gallery-top', {
       var galleryThumbs = new Swiper('.gallery-thumbs', {
         // spaceBetween: 10,
         slidesPerView: 2,
+        loop: true,
 
       
         
