@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Index</title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
    
    
    <div id="wrapper" class="wrapper">
-       <main class="main">
         <section class="hero section" id="hero">
             <div class="container">
              <div class="hero__row">
@@ -316,27 +316,27 @@
                              </a>
                             </div>
                             <div class="swiper-slide">
-                             <a href="#">
+                             <a data-fancybox data-src="#card1" href="javascript:;">
                                  <img src="images/catalog/1.png" alt="">
                              </a>
                             </div>
                             <div class="swiper-slide">
-                             <a href="#">
+                             <a data-fancybox data-src="#card1" href="javascript:;">
                                  <img src="images/catalog/2.png" alt="">
                              </a>
                             </div>
                             <div class="swiper-slide">
-                             <a href="#">
+                             <a data-fancybox data-src="#card1" href="javascript:;">
                                  <img src="images/catalog/3.png" alt="">
                              </a>
                             </div>
                             <div class="swiper-slide">
-                             <a href="#">
+                             <a data-fancybox data-src="#card1" href="javascript:;">
                                  <img src="images/catalog/1.png" alt="">
                              </a>
                             </div>
                             <div class="swiper-slide">
-                             <a href="#">
+                             <a data-fancybox data-src="#card1" href="javascript:;">
                                  <img src="images/catalog/2.png" alt="">
                              </a>
                             </div>
@@ -347,7 +347,7 @@
                 </div>
             </div>
         </section>
-        <section class="where-to-buy" id="where-to-buy">
+        <section class="where-to-buy section" id="where-to-buy">
             <div class="where-to-buy__row">
                <div class="where-to-buy__left-side">
                    <div class="section-title">
@@ -492,42 +492,43 @@
 
             </div>
         </section>
-        <section class="contacts section section--flex-start" id="contacts">
+        <section class="contacts section" id="contacts">
             <div class="container">
                 <h2 class="section-title">
                      контакты
                 </h2>
                 <div class="contacts__content">
-                    
-                  г. Курск, ул. Еремина, 3-5 <br>
-                 <a href="tel:+74712541881">+7(4712)54-18-81</a>   <span class="contacts__separator"> /</span><a href="tel:+7(919)1790770">
+                    г. Курск, ул. Еремина, 3-5 <br>
+                 <a href="tel:+74712541881">+7(4712)54-18-81</a><span class="contacts__separator">/</span><a href="tel:+7(919)1790770">
                     +7(919)179-07-70
                  </a> 
                  <br>
-                   <a href="mailto:info@arma.org.ru">info@arma.org.ru</a>
+                    <a href="mailto:info@arma.org.ru">info@rama.org.ru</a>
                 </div>
                 <div class="link-modal contacts__link-modal">заказать звонок</div>
             </div>
+            <footer class="footer">
+                <div class="contacts__bottom">
+                    <div class="container">
+                        <div class="contacts__bottom-row">
+                            <p class="contacts__copy copy">
+                             <span> 2020</span> © arma.org.ru all right reserved
+                            </p>
+                            <ul class="social">
+                                <li class="social__item">
+                                    <a href="#" class="social__link" style="background-image: url(images/social/inst.png);"></a>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+               </footer>
            
         </section>
-       </main>
-       <footer class="footer">
-        <div class="contacts__bottom">
-            <div class="container">
-                <div class="contacts__bottom-row">
-                    <p class="contacts__copy copy">
-                     <span> 2020</span> © arma.org.ru all right reserved
-                    </p>
-                    <ul class="social">
-                        <li class="social__item">
-                            <a href="#" class="social__link" style="background-image: url(images/social/inst.png);"></a>
-                        </li>
-                        
-                    </ul>
-                </div>
-            </div>
-        </div>
-       </footer>
+       
+    
+      
    </div>
 
 <div class="card-modal" style="display: none;" id="card1">
@@ -668,7 +669,7 @@
             // Своё изображение иконки метки.
             iconImageHref: 'images/location-pin.png',
             // Размеры метки.
-            iconImageSize: [110, 147],
+            iconImageSize: [40, 55],
             // Смещение левого верхнего угла иконки относительно
             // её "ножки" (точки привязки).
             iconImageOffset: [-5, -38]
@@ -701,7 +702,7 @@
             // Своё изображение иконки метки.
             iconImageHref: 'images/location-pin.png',
             // Размеры метки.
-            iconImageSize: [110, 147],
+            iconImageSize: [40, 55],
             // Смещение левого верхнего угла иконки относительно
             // её "ножки" (точки привязки).
             iconImageOffset: [-5, -38]
@@ -734,7 +735,7 @@
             // Своё изображение иконки метки.
             iconImageHref: 'images/location-pin.png',
             // Размеры метки.
-            iconImageSize: [110, 147],
+            iconImageSize: [40, 55],
             // Смещение левого верхнего угла иконки относительно
             // её "ножки" (точки привязки).
             iconImageOffset: [-5, -38]

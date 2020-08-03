@@ -18,6 +18,8 @@ input{
 body{
     font-family: 'Montserrat', sans-serif;
     outline: none;
+    position: relative;
+    overflow: hidden;
     width: 100%;
     @include for-md(){
         padding-top: 112px;
@@ -165,7 +167,7 @@ button{
     }
 }
 .section{
-    padding: 20px 0;
+  
     box-sizing: border-box;
 
     &--flex-start{
@@ -383,6 +385,7 @@ button{
         color: $black;
         text-decoration: none;
         transition: .3s;
+        font-weight: 600;
         &:hover{
             opacity: .6;
         }
@@ -448,8 +451,16 @@ button{
         box-sizing: border-box;
         padding-right: 88px;
         padding-bottom: 55px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        @include for-big-h(){
+            padding-right: 20px;
+            padding-bottom: 20px;
+        }
         @include for-xl(){
             padding-right: 20px;
+            padding-bottom: 20px;
         }
         @include for-md(){
             width: 100%;
@@ -569,6 +580,9 @@ button{
             align-items: flex-end;
             box-sizing: border-box;
             padding: 0 20px 88px 88px;
+            @include for-big-h(){
+                padding: 0 20px 20px 88px;
+            }
             @include for-xl(){
                 padding: 0 20px 20px 20px;
             }
@@ -637,7 +651,7 @@ button{
         }
     }
     &__bottom{
-        margin-top: 80px;
+      
         @include for-md(){
             display: none;
         }
@@ -658,14 +672,18 @@ button{
         font-size: 48px;
         line-height: 51px;
         font-weight: 700;
-        margin: 226px 0 90px ;
         padding-top: 30px;
         box-sizing: border-box;
-
-        @include for-xl(){
-            margin: 150px 0 60px;
+        @include for-big-h(){
             font-size: 40px;
-            line-height: 45px;
+            line-height: 44px;
+            margin: 20px 0;
+            padding-top: 20px;
+        }
+        @include for-xl(){
+            // margin: 150px 0 60px;
+            font-size: 35px;
+            line-height: 38px;
         }
         @include for-md(){
             box-sizing: border-box;
@@ -705,6 +723,7 @@ button{
         display: flex;
         flex-wrap: wrap;
         margin-right: -50px;
+        margin-top: -20px;
 
         @include for-md(){
             padding: 0 20px;
@@ -715,6 +734,8 @@ button{
         box-sizing: border-box;
         padding-right: 50px;
         width: 50%;
+        margin-bottom: 20px;
+        
 
         @include for-tiny-mob(){
             width: 100%;
@@ -729,9 +750,12 @@ button{
             text-transform: uppercase;
             padding-top: 27px;
             position: relative;
+            @include for-big-h(){
+                padding-top: 18px;
+            }
             @include for-xl(){
-                font-size: 20px;
-                line-height: 24px;
+                font-size: 18px;
+                line-height: 21px;
             }
             @include for-tiny-mob(){
                 font-size: 18px;
@@ -755,6 +779,7 @@ button{
 .where-to-buy{
     &__row{
         display: flex;
+        width: 100%;
         @include for-md(){
             flex-direction: column;
         }
@@ -767,8 +792,11 @@ button{
         flex-shrink: 0;
         background-color: #fff;
         box-sizing: border-box;
+        @include for-big-h(){
+            padding: 40px;
+        }
         @include for-xxl{
-            padding: 80px 40px;
+          
             max-width: 610px;
         }
         @include for-md(){
@@ -800,6 +828,9 @@ button{
         flex-wrap: wrap;
         margin-top: 80px;
         margin-right: -45px;
+        @include for-big-h(){
+            margin-top: 40px;
+        }
         @include for-md(){
             margin-top: 40px;
         }
@@ -819,6 +850,9 @@ button{
         &--last{
             margin-left: auto;
             margin-top: -280px;
+            @include for-big-h(){
+                margin-top: -240px;
+            }
             @include for-md(){
                 margin-left: 0;
                 margin-top: 0;
@@ -843,6 +877,11 @@ button{
         font-weight: 700;
         text-transform: uppercase;
         margin-bottom: 10px;
+        @include for-big-h(){
+            font-size: 13px;
+            line-height: 16px;
+            margin-bottom: 5px;
+        }
         @include for-md(){
             width: 100%;
         }
@@ -851,9 +890,16 @@ button{
         font-size: 14px;
         line-height: 17px;
         text-transform: uppercase;
+        @include for-big-h(){
+            font-size: 13px;
+            line-height: 16px;
+        }
 
         & + &{
             margin-top: 15px;
+            @include for-big-h(){
+                margin-top: 10px;
+            }
             @include for-md(){
                 margin-top: 0;
             }
@@ -885,16 +931,16 @@ button{
 .about{
     background:no-repeat center center;
     background-size: cover;
-    background-attachment: fixed;
-    display: flex;
-    align-items: center;
-    padding: 40px 0;
-    min-height: 100vh;
+
+
 
     &__row{
         display: flex;
         justify-content: flex-end;
         margin-top: 105px;
+        @include for-big-h(){
+            margin-top: 50px;
+        }
         @include for-md(){
             margin-top: 52px;
         }
@@ -902,7 +948,8 @@ button{
     &__section-title{
         flex-shrink: 0;
 
-      margin: 0 50px 0 0;
+     margin: 0;
+     
     }
     .content_block{
         
@@ -913,6 +960,10 @@ button{
         text-indent: 35px;
         font-size: 22px;
         line-height: 35px;
+        @include for-big-h(){
+            font-size: 20px;
+            line-height: 24px;
+        }
         @include for-sm(){
             font-size: 18px;
             line-height: 24px;
@@ -924,6 +975,13 @@ button{
         }
       }
     }
+    .container{
+        padding: 80px 20px;
+        box-sizing: border-box;
+        @include for-big-h(){
+            padding: 40px 20px;
+        }
+    }
 }
 
 .section-title{
@@ -932,6 +990,10 @@ button{
     font-weight: 700;
     text-transform: uppercase;
     color: $black;
+    @include for-big-h(){
+        font-size: 40px;
+        line-height: 45px;
+    }
     @include for-md(){
         font-size: 32px;
         line-height: 35px;
@@ -945,9 +1007,14 @@ button{
     }
 }
 .features{
-    padding: 80px 0;
     position: relative;
     overflow: hidden;
+    .container{
+        padding: 40px 20px 10px;
+        @include for-big-h(){
+            padding: 40px 20px 0;
+        }
+    }
     @include for-md(){
         padding: 60px 0 40px;
     }
@@ -959,25 +1026,31 @@ button{
         display: flex;
         flex-wrap: wrap;
         margin-right: -90px;
-        @include for-xl(){
-            margin-right: -45px;
-         }
+        @include for-big-h(){
+            margin-top: 30px;
+        }
+        @include for-big-h(){
+            margin-right: -30px;
+        }
          @include for-md(){
              margin-top: 40px;
+             margin-right: -30px;
          }
     }
    
     &__item-container{
         padding-right: 90px;
-        @include for-xl(){
-            padding-right: 45px;
+        @include for-big-h(){
+            padding-right: 30px;
         }
         box-sizing: border-box;
         width: 25%;
         margin-bottom: 25px;
+        
 
         @include for-md(){
             width: 33.3%;
+            padding-right: 30px;
         }
         @include for-sm(){
             width: 50%;
@@ -995,9 +1068,14 @@ button{
         display: flex;
         align-items: center;
         justify-content: center;
-
-        @include for-xl(){
-            height: 70px;
+        @include for-big-h(){
+            height: 60px;
+        }
+        @include for-medium-h {
+            height: 40px;
+        }
+        @include for-md(){
+            height: 60px;
         }
     }
     &__icon{
@@ -1008,14 +1086,21 @@ button{
         font-size: 18px;
         line-height: 1.5;
         color: $grey;
+        @include for-big-h(){
+            font-size: 15px;
+        }
+        @include for-medium-h {
+            font-size: 14px;
+            line-height: 17px;
+        }
     }
 }
 .contacts {
-    padding: 80px 0;
+
     position: relative;
-    padding-bottom: 125px;
+   
     &__content{
-        margin-top: 300px;
+       
         font-size: 34px;
         line-height: 54px;
         color: $grey;
@@ -1047,12 +1132,13 @@ button{
     &__link-modal{
         font-size: 30px;
         line-height: 33px;
-        margin-top: 130px;
+       
         display: inline-block;
         color: $grey;
         border-bottom: 1px solid $grey;
         transition: .3s;
         cursor: pointer;
+        width: fit-content;
         text-transform: uppercase;
         @include for-md(){
             font-size: 20px;
@@ -1068,6 +1154,8 @@ button{
         background-color: #000;
         box-sizing: border-box;
         padding: 34px 0;
+        flex-shrink: 0;
+        
         @include for-sm(){
             padding: 17px 0;
         }
@@ -1084,6 +1172,24 @@ button{
             }
 
         }
+    }
+    .footer{
+        margin-top: 60px;
+    }
+    .fp-scroller,.fp-tableCell{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .fp-tableCell{
+        padding-top: 80px;
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        
     }
     
    
@@ -1108,9 +1214,10 @@ button{
     padding: 0;
     margin: 0;
     display: flex;
+    flex-wrap: wrap;
     list-style: none;
-    &__item + &__item{
-        margin-left: 20px;
+    &__item{
+        margin: 5px;
     }
     &__link{
         display: block;
@@ -1126,7 +1233,6 @@ button{
     }
 }
 .catalog{
-    padding: 80px 0;
     @include for-md(){
         padding: 40px 0;
     }
@@ -1134,13 +1240,17 @@ button{
         
         height: 614px;
         background: url(../images/calatog-sldier.png) no-repeat center 370px;
+        @include for-big-h(){
+            height: 400px;
+            background-position: center bottom;
+        }
         @include for-xxl(){
             background-size: contain;
         }
-        @include for-xl(){
-            height: 450px;
-            background-position: center bottom;
-        }
+        // @include for-xl(){
+        //     height: 450px;
+        //     background-position: center bottom;
+        // }
         @include for-md(){
             background-image: none;
             height: 300px;
@@ -1149,9 +1259,17 @@ button{
         }
         .swiper-button-next{
             right: 30%;
+            top: 300px;
+            @include for-big-h(){
+                top: 200px;
+            }
         }
         .swiper-button-prev{
             left: 30%;
+            top: 300px;
+            @include for-big-h(){
+                top: 200px;
+            }
         }
         .swiper-button-next, .swiper-button-prev{
             @include for-md(){
@@ -1185,8 +1303,11 @@ button{
             align-items: center;
             justify-content: center;
             transition: .3s;
-            @include for-xl(){
-                height: 300px;
+            // @include for-xl(){
+            //     height: 300px;
+            // }
+            @include for-big-h(){
+                height: 200px;
             }
             @include for-md(){
                 align-items: flex-end;
@@ -1201,12 +1322,16 @@ button{
         .swiper-slide.swiper-slide-active{
             a{
                 height: 614px;
-                @include for-xxl(){
-                    align-items: flex-end;
+                align-items: flex-end;
+                @include for-big-h(){
+                    height: 400px;
                 }
-                @include for-xl(){
-                    height: 550px;
-                }
+                // @include for-xxl(){
+                //     align-items: flex-end;
+                // }
+                // @include for-xl(){
+                //     height: 550px;
+                // }
                 @include for-md(){
                     height: 300px;
                     align-items: flex-end;
@@ -2491,4 +2616,11 @@ button{
     padding: 10px;
     padding-top: 40px;
   }
+}
+.fp-scrollable,.fp-scroller,.ymaps-2-1-77-map{
+    width: 100%;
+}
+
+.footer{
+    width: 100%;
 }

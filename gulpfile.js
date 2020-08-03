@@ -42,6 +42,8 @@ gulp.task('js', function(){
         'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js',
        
         'node_modules/wowjs/dist/wow.min.js',
+        
+        // 'assest/js/scrolloverflow.js',
         'assest/js/jquery.arcticmodal.js',
         // 'node_modules/magnific-popup/dist/jquery.magnific-popup.js',
         // 'node_modules/jquery-nice-select/js/jquery.nice-select.js'
