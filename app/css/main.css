@@ -4830,6 +4830,16 @@ body.fullpage {
   flex: 0 0 auto;
 }
 
+.main {
+  position: relative;
+}
+
+@media (max-width: 1024px) {
+  .main {
+    overflow: hidden;
+  }
+}
+
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
@@ -4922,13 +4932,6 @@ button {
 .wrapper {
   min-height: 100%;
   width: 100%;
-}
-
-@media (max-width: 1024px) {
-  .wrapper {
-    position: relative;
-    overflow: hidden;
-  }
 }
 
 .container {
@@ -6851,6 +6854,10 @@ button {
   color: #acacac;
 }
 
+.card .gallery-thumbs {
+  width: 370px;
+}
+
 @media (max-width: 1600px) {
   .card .gallery-thumbs {
     position: absolute;
@@ -6866,12 +6873,23 @@ button {
     transform: translateX(-50%);
     top: -177px;
     overflow: visible;
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 1024px) {
+  .card .gallery-thumbs {
+    width: 300px;
   }
 }
 
 @media (max-width: 768px) {
   .card .gallery-thumbs {
     width: 100%;
+    left: 20px;
+    transform: none;
+    padding-left: 65px;
+    overflow: hidden;
   }
 }
 

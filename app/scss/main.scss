@@ -53,6 +53,12 @@ body{
      }
     
 }
+.main{
+    position: relative;
+    @include for-md(){
+        overflow: hidden;
+    }
+}
 h1,h2,h3,h4,h5,h6{
     margin: 0;
     padding: 0;
@@ -178,10 +184,7 @@ button{
 .wrapper{
     min-height: 100%;
     width: 100%;
-    @include for-md(){
-        position: relative;
-        overflow: hidden;
-    }
+
     // overflow: hidden;
 }
 .container{
@@ -1625,6 +1628,7 @@ button{
 }
 
 .card{
+   
     padding-bottom: 118px;
     @include for-xxl{
         padding-bottom: 278px;
@@ -1667,6 +1671,7 @@ button{
        }
     }
     .gallery-thumbs{
+        width: 370px;
         @include for-xxl{
             position: absolute;
             bottom: -200px;
@@ -1678,9 +1683,18 @@ button{
             transform: translateX(-50%);
             top: -177px;
             overflow: visible;
+            overflow: hidden;
+        }
+      
+        @include for-md(){
+            width: 300px;
         }
         @include for-sm{
             width: 100%;
+            left: 20px;
+            transform: none;
+            padding-left: 65px;
+            overflow: hidden;
         }
         
         .swiper-wrapper{
