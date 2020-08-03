@@ -4805,7 +4805,21 @@ body.fullpage {
 
 @media (max-width: 1024px) {
   body {
-    padding-top: 112px;
+    padding-top: 72px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .wrapper#fullpage {
+    position: relative;
+    overflow: hidden;
+    transform: initial !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  .wrapper#fullpage .section, .wrapper#fullpage .fp-tableCell {
+    height: auto !important;
   }
 }
 
@@ -5288,7 +5302,7 @@ button {
 
 @media (max-width: 1024px) {
   .hero__header {
-    padding: 40px 20px;
+    padding: 20px;
   }
 }
 
@@ -6427,6 +6441,7 @@ button {
 
 @media (max-width: 1024px) {
   .catalog__slider a {
+    height: 300px;
     align-items: flex-end;
   }
 }
@@ -6457,6 +6472,12 @@ button {
 
 .catalog:not(.section) {
   margin-top: 50px;
+}
+
+@media (max-width: 1024px) {
+  .catalog:not(.section) {
+    margin-top: 0;
+  }
 }
 
 .catalog__view {

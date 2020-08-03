@@ -30,7 +30,19 @@ body{
         }
     }
     @include for-md(){
-        padding-top: 112px;
+        padding-top: 72px;
+    }
+}
+.wrapper#fullpage{
+    @include for-md(){
+        position: relative;
+        overflow: hidden;
+        transform: initial !important;
+    }
+    .section,.fp-tableCell{
+        @include for-md(){
+            height: auto !important;
+        }
     }
 }
 .wrapper:not(#fullpage){
@@ -473,7 +485,7 @@ button{
             padding-top: 40px;
         }
             @include for-md(){
-                padding: 40px 20px;
+                padding: 20px;
             }
     }
     &__left{
@@ -1342,6 +1354,7 @@ button{
                 height: 200px;
             }
             @include for-md(){
+                height: 300px;
                 align-items: flex-end;
             }
 
@@ -1381,6 +1394,9 @@ button{
 .catalog{
     &:not(.section){
         margin-top: 50px;
+        @include for-md(){
+            margin-top: 0;
+        }
     }
     &__view{
         display: flex;

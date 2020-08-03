@@ -33,7 +33,7 @@ new WOW().init();
   // });
 
   $(document).ready(function() {
- 	 
+  
     // Initializing fullpage.js
     initialize(true);
      
@@ -56,7 +56,7 @@ new WOW().init();
     });
     }
      
-     
+  
      
     });
   
@@ -199,9 +199,9 @@ var galleryTop = new Swiper('.gallery-top', {
 
   $(document).ready(function() {
     $("a.main-menu__link").click(function () {
-      elementClick = $(this).attr("href")
-      destination = $(elementClick).offset().top;
-      $("html:not(:animated),body:not(:animated)").animate({scrollTop: destination}, 1100);
+      // elementClick = $(this).attr("href")
+      // destination = $(elementClick).offset().top;
+      // $("html:not(:animated),body:not(:animated)").animate({scrollTop: destination}, 1100);
       var windowSize = $(window).width(); 
       if(windowSize < 1025){
         // $(".header__menu").slideToggle(300);
