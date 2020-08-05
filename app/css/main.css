@@ -6709,7 +6709,7 @@ button {
 }
 
 .catalog-item__title:hover {
-  opacity: .7;
+  color: #ff0000;
 }
 
 @media (max-width: 768px) {
@@ -6762,7 +6762,7 @@ button {
 }
 
 .catalog-item__price:hover {
-  opacity: .7;
+  color: #ff0000;
 }
 
 @media (max-width: 768px) {

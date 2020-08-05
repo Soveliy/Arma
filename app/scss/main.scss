@@ -1569,7 +1569,7 @@ button{
         line-height: 34px;
         transition: .3s;
         &:hover{
-            opacity: .7;
+           color: #ff0000;
         }
         @include for-sm{
             font-size: 24px;
@@ -1607,7 +1607,7 @@ button{
         line-height: 40px;
         transition: .3s;
         &:hover{
-            opacity: .7;
+            color: #ff0000;
         }
         @include for-sm{
             
