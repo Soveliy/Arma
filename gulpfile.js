@@ -45,6 +45,7 @@ gulp.task('js', function(){
         
         'assest/js/scrolloverflow.js',
         'assest/js/jquery.arcticmodal.js',
+        'assest/js/mask.js',
         // 'node_modules/magnific-popup/dist/jquery.magnific-popup.js',
         // 'node_modules/jquery-nice-select/js/jquery.nice-select.js'
     ])

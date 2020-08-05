@@ -222,6 +222,47 @@ button{
     }
 }
 .main-menu{
+    .header__basket{
+        display: none;
+        @include for-md(){
+            margin-left: auto;
+            display: block;
+        }
+    }
+    .link-modal{
+        display: none;
+        @include for-md(){
+            margin-left: auto;
+            display: block;
+        }
+    }
+    .header__link-modal:not(.on-mobile){
+       @include for-md(){
+        display: inline-flex;
+        color: #fff;
+        margin: 20px 0;
+       }
+    }
+    .header__phone-container:not(.on-mobile){
+        @include for-md(){
+            display: block;
+            color: #fff;
+
+            & + &{
+                margin-top: 10px;
+            }
+        }
+    }
+    .header__phone-link{
+        color: #fff;
+    }
+    .header__phones{
+        display: none !important;
+        @include for-md(){
+           
+            display: block !important;
+        }
+    }
     @include for-md(){
         display: none;
         position: absolute;
@@ -232,6 +273,8 @@ button{
         padding: 60px 20px 120px 60px;
         box-sizing: border-box;
         z-index: 900;
+        height: calc(90vh - 72px);
+        overflow: auto;
         
     }
     @include for-sm(){
@@ -301,6 +344,29 @@ button{
            padding: 0;
        }
    }
+   .header__basket{
+    margin-left: auto;
+    position: relative;
+    border: none;
+    padding: 0;
+    outline: none;
+    background-color: transparent;
+
+    &-value{
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background-color: #fff;
+        text-align: center;
+        line-height: 18px;
+        font-size: 12px;
+        color: #000;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        margin-left: -11px;
+    }
+}
     &--red{
         padding-bottom: 43px;
         background-color: $red;
@@ -330,9 +396,7 @@ button{
                 text-shadow: 0 0 2px $white, 0 0 2px $white, 0 0 2px $white;
             }
         }
-        .main-menu__list{
-            margin-top: 35px;
-        }
+       
         .header__phones{
             display: flex;
             flex-direction: column;
@@ -353,29 +417,7 @@ button{
             color: $white;
             margin-left: 60px;
         }
-        .header__basket{
-            margin-left: auto;
-            position: relative;
-            border: none;
-            padding: 0;
-            outline: none;
-            background-color: transparent;
-
-            &-value{
-                width: 18px;
-                height: 18px;
-                border-radius: 50%;
-                background-color: #fff;
-                text-align: center;
-                line-height: 18px;
-                font-size: 12px;
-                color: #000;
-                position: absolute;
-                top: 0;
-                left: 50%;
-                margin-left: -11px;
-            }
-        }
+        
     }
     &__row{
         display: flex;
@@ -921,6 +963,10 @@ button{
         font-weight: 700;
         text-transform: uppercase;
         margin-bottom: 10px;
+        transition: .3s;
+        &:hover{
+            opacity: .7;
+        }
         @include for-big-h(){
             font-size: 13px;
             line-height: 16px;
@@ -1120,6 +1166,7 @@ button{
         }
         @include for-md(){
             height: 60px;
+            margin-bottom: 15px;
         }
     }
     &__icon{
@@ -1429,6 +1476,10 @@ button{
         background-repeat: no-repeat;
         background-position: center;
         outline: none;
+        transition: .3s;
+        &:hover{
+            opacity: .9;
+        }
         &--grid{
             background-image: url(../images/grid-icon.png);
         }
@@ -1511,6 +1562,10 @@ button{
     &__title{
         font-size: 30px;
         line-height: 34px;
+        transition: .3s;
+        &:hover{
+            opacity: .7;
+        }
         @include for-sm{
             font-size: 24px;
             line-height: 28px;
@@ -1545,6 +1600,10 @@ button{
         font-weight: 700;
         font-size: 36px;
         line-height: 40px;
+        transition: .3s;
+        &:hover{
+            opacity: .7;
+        }
         @include for-sm{
             
             font-size: 32px;
@@ -1688,11 +1747,13 @@ button{
     }
     .gallery-thumbs{
         width: 370px;
+        height: 177px;
         @include for-xxl{
             position: absolute;
             bottom: -200px;
             left: 0;
         }
+        
         @include for-md{
             bottom: auto;
             left: 50%;
@@ -1700,26 +1761,26 @@ button{
             top: -177px;
             overflow: visible;
             overflow: hidden;
+            height: 140px;
         }
       
         @include for-md(){
             width: 300px;
         }
         @include for-sm{
-            width: 100%;
-            left: 20px;
-            transform: none;
-            padding-left: 65px;
+           
+          
+           
             overflow: hidden;
         }
         
-        .swiper-wrapper{
-            @include for-sm{
-                display: flex;
-                width: 100%;
-                justify-content: center;
-            }
-        }
+        // .swiper-wrapper{
+        //     @include for-sm{
+        //         display: flex;
+        //         width: 100%;
+        //         justify-content: center;
+        //     }
+        // }
     }
     .gallery-top{
         max-width: 500px;
@@ -1786,16 +1847,17 @@ button{
     }
     &__side-slide{
         padding: 24px 40px;
-        width: auto !important;
+        box-sizing: border-box;
         border: 1px solid #d0d0d0;
+        background-color: #fff;
         border-radius: 10px;
         @include for-md{
             padding: 15px 30px;
         }
     }
-    &__side-slide + &__side-slide{
-        margin-left: 10px;
-    }
+    // &__side-slide + &__side-slide{
+    //     margin-left: 10px;
+    // }
     &__info{
         display: flex;
         align-items: flex-start;
@@ -2285,12 +2347,17 @@ button{
 }
 
 .card-modal{
+    .card__side-slide + .card__side-slide{
+        margin-left: 0;
+    }
     .gallery-thumbs{
         width: 371px;
+        @include for-xl(){
+            bottom: 0;
+            width: 300px;
+        }
     }
-    @include for-tiny-mob2(){
-        max-width: 300px;
-    }
+  
     box-shadow: 0 0 10px 10px rgba($black, .4);
     border-radius: 10px;
     .card{
@@ -2298,21 +2365,30 @@ button{
     }
     padding: 70px;
     max-width: 1250px;
-    @include for-lg(){
+    @include for-xl(){
         padding: 70px 35px;
+        max-width: 900px;
+    }
+    @include for-lg(){
+       
     }
     @include for-md(){
         padding: 35px 15px;
+    }
+    @include for-tiny-mob2(){
+        max-width: 300px;
     }
     .card .gallery-thumbs{
         @include for-lg(){
             bottom: 0;
         }
         @include for-md(){
-            position: static;
-            transform: none;
-            margin: 0 auto;
+           
+          top: -180px;
 
+        }
+        @include for-md(){
+            max-width: 280px;
         }
     }
     .card__inner{
@@ -2323,16 +2399,17 @@ button{
         max-width:500px;
         flex-shrink: 0;
         margin-right: 100px;
-        @include for-lg(){
+        @include for-xl(){
             max-width: 300px;
             height: 350px;
+            margin-right: 30px;
         }
     }
     .card__main-img-block {
         display: flex;
         align-items: center;
         justify-content: center;
-        @include for-lg(){
+        @include for-xl(){
             height: 350px;
         }
     }
@@ -2342,6 +2419,7 @@ button{
         height: auto;
     }
     .card__info{
+        width: 100%;
         padding: 0;
         @include for-md(){
             flex-wrap: wrap;
@@ -2403,10 +2481,16 @@ button{
     }
     .card__container{
         @include for-md(){
-            margin-top: 50px;
+            margin-top: 200px;
         }
     }
     .card__side-slide{
+        @include for-xl(){
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
         @include for-sm(){
             padding: 15px;
         }
@@ -2689,4 +2773,8 @@ button{
 
 .footer{
     width: 100%;
+}
+
+.box_content_modal__page_block.modal_textinfo_class{
+    max-width: 1140px;
 }

@@ -21,46 +21,37 @@ $(document).ready(function() {
 var wow = new WOW();
 new WOW().init();
 
-  // $('#wrapper').fullpage({
-  //   autoScrolling:true,
-  //   scrollBar: false,
-  //   scrollHorizontally: true,
-  //   responsiveWidth: 1024,
-  //   responsiveHeight:640,
-  //   scrollOverflow:true,
-	//  fitToSection:true,
-   
-  // });
+
 
   $(document).ready(function() {
   
     // Initializing fullpage.js
-    initialize(true);
+
      
-    function initialize(hasScrollBar){
+
     $('#fullpage').fullpage({
     
-    // menu: '#menu',
+
     responsiveHeight: 640,
     responsiveWidth: 1024,
-   css3: true,
-   easing: 'ease',
+    // menu: '#menu',
+      
     slidesNavigation: true,
     scrollingSpeed: 1000,
     
     scrollHorizontally: false,
     
-    navigation:false,
+
    
     anchors: ['hero', 'about', 'features', 'catalog', 'where-to-buy', 'contacts']
     });
-    }
+    
      
   
      
     });
   
-
+    $.fancybox.defaults.backFocus = false;
 
 var hero__top_slider = new Swiper('.hero__slider-top .swiper-container', {
   pagination: {
@@ -134,14 +125,14 @@ $('.burger').click(function(){
   $('.main-menu').slideToggle(300);
 });
 
-var galleryThumbs = new Swiper('.gallery-thumbs', {
-  // spaceBetween: 10,
+var galleryThumbs_card = new Swiper('.card__gallery-thumbs', {
+  spaceBetween: 10,
   slidesPerView: 2,
   freeMode: true,
   watchSlidesVisibility: true,
   watchSlidesProgress: true,
 });
-var galleryTop = new Swiper('.gallery-top', {
+var galleryTop_card = new Swiper('.card__gallery-top', {
   // spaceBetween: 10,
   slidesPerView: 1,
   effect: 'fade',
@@ -149,7 +140,7 @@ var galleryTop = new Swiper('.gallery-top', {
     crossFade: true
   },
   thumbs: {
-    swiper: galleryThumbs
+    swiper: galleryThumbs_card
   }
 });
 
@@ -170,38 +161,45 @@ var galleryTop = new Swiper('.gallery-top', {
 
 
 
-  $(".catalog__slider a").fancybox({
-		afterShow: function( instance, slide ) {
 
-      var galleryThumbs = new Swiper('.gallery-thumbs', {
-        // spaceBetween: 10,
-        slidesPerView: 2,
-        loop: true,
 
-      
-        
-      });
-      var galleryTop = new Swiper('.gallery-top', {
-        // spaceBetween: 10,
-        slidesPerView: 1,
-        effect: 'fade',
-        fadeEffect: {
-          crossFade: true
-        },
-        thumbs: {
-          swiper: galleryThumbs
-        }
-      });
+$(".catalog__slider a").fancybox({
 
-		}
+ afterLoad              : function( instance, slide ) {
+
+
+
+
+  let galleryThumbs_modal = new Swiper('.fancybox-is-open .gallery-thumbs', {
+    spaceBetween: 10,
+    slidesPerView: 2,
+    freeMode: true,
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true,
   });
+    let galleryTop_card = new Swiper('.fancybox-is-open .gallery-top', {
+      // spaceBetween: 10,
+      slidesPerView: 1,
+      effect: 'fade',
+      fadeEffect: {
+        crossFade: true
+      },
+      thumbs: {
+        swiper: galleryThumbs_modal
+            }
+    });
+    
   
+ 
 
+
+}
+});
   $(document).ready(function() {
     $("a.main-menu__link").click(function () {
-      // elementClick = $(this).attr("href")
-      // destination = $(elementClick).offset().top;
-      // $("html:not(:animated),body:not(:animated)").animate({scrollTop: destination}, 1100);
+      elementClick = $(this).attr("href")
+      destination = $(elementClick).offset().top;
+      $("html:not(:animated),body:not(:animated)").animate({scrollTop: destination}, 1100);
       var windowSize = $(window).width(); 
       if(windowSize < 1025){
         // $(".header__menu").slideToggle(300);
@@ -212,9 +210,19 @@ var galleryTop = new Swiper('.gallery-top', {
     });
    
   });
-
+     
 
   
+
+  
+
+
   $(".link-modal").click(function(){
     $("#modal_call_back").arcticmodal();
   });
+  $(".modal_text_but-js").click(function(){
+    $("#modal_text_info").arcticmodal();
+  });
+  $(".mask_phone").mask("+7 (999) 999-99-99");
+
+

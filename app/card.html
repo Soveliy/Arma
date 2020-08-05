@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Card</title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
     <div class="wrapper">
@@ -35,26 +36,42 @@
                         </div>
                     </div>
                 </div> 
-                 <nav class="header__main-menu main-menu">
-                    <ul class="main-menu__list">
-                        <li class="main-menu__list-item">
-                            <a href="#" class="main-menu__link">главная</a>
-                        </li>
-                        <li class="main-menu__list-item">
-                            <a href="#" class="main-menu__link">о компании</a>
-                        </li>
-                        <li class="main-menu__list-item">
-                            <a href="#" class="main-menu__link">каталог</a>
-                        </li>
-                        <li class="main-menu__list-item">
-                            <a href="#" class="main-menu__link">где купить</a>
-                        </li>
-                        <li class="main-menu__list-item">
-                            <a href="#" class="main-menu__link">контакты</a>
-                        </li>
-    
-                    </ul>
-                </nav>  
+                <div class="header__main-menu main-menu ">
+                    <button class="header__basket">
+                        <span class="header__basket-value">1</span>
+                        <img class="header__basket-img" src="images/basket.png" alt="">
+                    </button>
+                     <ul class="main-menu__list"  id="menu">
+                         <li class="main-menu__list-item">
+                             <a href="#hero" data-menuanchor="hero" class="main-menu__link">главная</a>
+                         </li>
+                         <li class="main-menu__list-item">
+                             <a href="#about"  data-menuanchor="about" class="main-menu__link">о компании</a>
+                         </li>
+                         <li class="main-menu__list-item">
+                             <a href="#catalog" data-menuanchor="catalog"  class="main-menu__link">каталог</a>
+                         </li>
+                         <li class="main-menu__list-item">
+                             <a href="#where-to-buy" data-menuanchor="where-to-buy" class="main-menu__link">где купить</a>
+                         </li>
+                         <li class="main-menu__list-item">
+                             <a href="#contacts"  data-menuanchor="contacts"class="main-menu__link">контакты</a>
+                         </li>
+
+                     </ul>
+                     <a  class="link-modal header__link-modal">заказать звонок</a>
+                     <div class="header__phones">
+                         <div class="header__phone-container">
+                             <a href="tel:+74712541881" class="header__phone-link">+7 (4712) 54-18-81
+                             </a>
+                         </div>
+                         <div class="header__phone-container">
+                             <a href="tel:+79191790770
+                             " class="header__phone-link">+7 (919) 179-07-70
+                             </a>
+                         </div>
+                     </div>
+                    </div>
             </div>
             
             
@@ -65,7 +82,7 @@
             <div class="card">
                 <div class="container">
                     <div class="card__inner">
-                        <div class="swiper-container gallery-top">
+                        <div class="swiper-container card__gallery-top gallery-top">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
                                     <a class="card__main-img-block fancybox" data-fancybox  href="images/catalog/4.png">
@@ -86,7 +103,7 @@
                         </div>
                         <div class="card__container">
                             <div class="card__info">
-                                <div class="swiper-container gallery-thumbs">
+                                <div class="swiper-container gallery-thumbs card__gallery-thumbs">
                                     <div class="swiper-wrapper">
                                         <div class="swiper-slide card__side-slide">
                                             <div class=" card__side-img-block">
