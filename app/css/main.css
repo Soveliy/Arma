@@ -5138,6 +5138,12 @@ button {
   background-color: transparent;
 }
 
+@media (max-width: 1024px) {
+  .header .header__basket {
+    margin-left: 0;
+  }
+}
+
 .header .header__basket-value {
   width: 18px;
   height: 18px;
@@ -5264,7 +5270,8 @@ button {
 
 @media (max-width: 1024px) {
   .header__basket {
-    display: none;
+    order: -1;
+    margin-right: 20px;
   }
 }
 

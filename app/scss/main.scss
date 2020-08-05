@@ -352,6 +352,9 @@ button{
     outline: none;
     background-color: transparent;
 
+    @include for-md(){
+        margin-left: 0;
+    }
     &-value{
         width: 18px;
         height: 18px;
@@ -461,7 +464,9 @@ button{
     }
     &__basket{
         @include for-md(){
-            display: none;
+           order: -1;
+          
+           margin-right: 20px;
         }
     }
     &__phone-link{
