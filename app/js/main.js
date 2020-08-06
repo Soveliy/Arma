@@ -1,7 +1,24 @@
+windowSize = $(window).width();
 $(window).on('resize', function(event){
   windowSize = $(window).width(); 
+
+  if(windowSize < 1025){
+    $(".where-to-buy__info-item-container").removeClass("active");
+    $('.where-to-buy__map-container').removeClass('active');
+
+  }
+  else{
+    $(".where-to-buy__info-item-container:first-child").addClass("active");
+    $('.where-to-buy__map-container:first-child').addClass('active');
+    $(".where-to-buy__modal-container").removeClass("active")
+  }
 });
-windowSize = $(window).width();
+$('.where-to-buy__modal-container,.where-to-buy__map-container-close').click(function(){
+  $(".where-to-buy__modal-container").removeClass("active")
+  $(".where-to-buy__info").removeClass("active");
+  $('.where-to-buy__map-container').removeClass('active');
+});
+
 $(document).ready(function() {
   $('.counter__minus').click(function () {
     var $input = $(this).parent().find('input');
@@ -24,6 +41,18 @@ new WOW().init();
 
 
   $(document).ready(function() {
+
+    windowSize = $(window).width();
+    if(windowSize < 1025){
+      $(".where-to-buy__info-item-container").removeClass("active");
+      $('.where-to-buy__map-container').removeClass('active');
+    
+    }
+    else{
+      $(".where-to-buy__info-item-container:first-child").addClass("active");
+      $('.where-to-buy__map-container:first-child').addClass('active');
+      $(".where-to-buy__modal-container").removeClass("active")
+    }
   
     // Initializing fullpage.js
 
@@ -123,6 +152,9 @@ $('.catalog__view-button--list').click(function(){
 $('.burger').click(function(){
   $(this).toggleClass("active");
   $('.main-menu').slideToggle(300);
+  $(".where-to-buy__modal-container").removeClass("active")
+  $(".where-to-buy__info").removeClass("active");
+  $('.where-to-buy__map-container').removeClass('active');
 });
 
 var galleryThumbs_card = new Swiper('.card__gallery-thumbs', {
@@ -147,17 +179,28 @@ var galleryTop_card = new Swiper('.card__gallery-top', {
 
 
 
-(function($) {
-  $(function() {
+$('.info-item__city').click(function(){
+  $(this).closest("div.where-to-buy__info-item-container")
+  .addClass('active').siblings().removeClass('active')
+  .closest('div.where-to-buy__row').find('div.where-to-buy__map-container').removeClass('active').eq($(this).closest("div.where-to-buy__info-item-container").index()).addClass('active');
+  $('.where-to-buy__modal-container').addClass('active');
+});
+// (function($) {
+//   $(function() {
     
-    $('.where-to-buy__info').on('click', '.where-to-buy__info-item-container:not(.active)', function() {
-      $(this)
-        .addClass('active').siblings().removeClass('active')
-        .closest('div.where-to-buy__row').find('div.where-to-buy__map').removeClass('active').eq($(this).index()).addClass('active');
-    });
+//     $('.where-to-buy__info').on('click', '.where-to-buy__info-item-container:not(.active)', function() {
+      
     
-  });
-  })(jQuery);
+       
+ 
+         
+        
+//     });
+
+   
+    
+//   });
+//   })(jQuery);
 
 
 
@@ -211,7 +254,15 @@ $(".catalog__slider a").fancybox({
    
   });
      
-
+  jQuery(function($){
+    $(document).mouseup(function (e){ // событие клика по веб-документу
+      var div = $("#popup"); // тут указываем ID элемента
+      if (!div.is(e.target) // если клик был не по нашему блоку
+          && div.has(e.target).length === 0) { // и не по его дочерним элементам
+        div.hide(); // скрываем его
+      }
+    });
+  });
   
 
   

@@ -4881,6 +4881,7 @@ button {
   .burger {
     display: flex;
     flex-direction: column;
+    order: -1;
   }
 }
 
@@ -4920,6 +4921,12 @@ button {
 .logo {
   width: 170px;
   height: 32px;
+}
+
+@media (max-width: 1024px) {
+  .logo {
+    margin-right: auto;
+  }
 }
 
 .logo__image {
@@ -4997,7 +5004,7 @@ button {
   .main-menu .header__link-modal:not(.on-mobile) {
     display: inline-flex;
     color: #fff;
-    margin: 20px 0;
+    margin: 35px 0 10px;
   }
 }
 
@@ -5044,7 +5051,7 @@ button {
 @media (max-width: 768px) {
   .main-menu {
     width: 100%;
-    padding: 40px 20px;
+    padding: 40px 20px 55px;
   }
 }
 
@@ -5140,7 +5147,7 @@ button {
 
 @media (max-width: 1024px) {
   .header .header__basket {
-    margin-left: 0;
+    margin-left: auto;
   }
 }
 
@@ -5232,6 +5239,7 @@ button {
 @media (max-width: 1024px) {
   .header__row {
     align-items: center;
+    flex-direction: row-reverse;
   }
 }
 
@@ -5286,12 +5294,6 @@ button {
 
 .header__phone-link:hover {
   opacity: .6;
-}
-
-@media (max-width: 1024px) {
-  .header__logo {
-    margin-left: auto;
-  }
 }
 
 .hero {
@@ -5792,6 +5794,18 @@ button {
   }
 }
 
+@media (max-width: 1024px) {
+  .where-to-buy__modal-container.active {
+    background-color: rgba(0, 0, 0, 0.61);
+    z-index: 8000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+}
+
 .where-to-buy__left-side {
   min-height: 100vh;
   max-width: 710px;
@@ -5829,7 +5843,64 @@ button {
 
 @media (max-width: 1024px) {
   .where-to-buy__right-side {
-    height: 300px;
+    height: 0;
+  }
+}
+
+.where-to-buy__helpbox {
+  display: none;
+  font-size: 17px;
+  line-height: 20px;
+  box-sizing: border-box;
+  margin: 0 auto 20px;
+}
+
+@media (max-width: 1024px) {
+  .where-to-buy__helpbox {
+    display: block;
+    margin-top: 20px;
+  }
+}
+
+.where-to-buy__map-container {
+  display: none;
+  height: 100%;
+  position: relative;
+}
+
+.where-to-buy__map-container.active {
+  display: block;
+}
+
+@media (max-width: 1024px) {
+  .where-to-buy__map-container {
+    position: fixed;
+    width: 90%;
+    left: 5%;
+    top: calc(50% + 50px);
+    margin-top: -175px;
+    padding: 25px;
+    border-radius: 5px;
+    height: 350px;
+    padding: 25px;
+    box-sizing: border-box;
+    border-radius: 6px;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.61);
+    z-index: 8500;
+  }
+}
+
+@media (max-width: 1024px) {
+  .where-to-buy__map-container-close {
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    margin-bottom: 20px;
+    height: 20px;
+    width: 20px;
+    background: url(../images/icons/close_modal-wtihe.png) no-repeat center center;
+    background-size: contain;
+    cursor: pointer;
   }
 }
 
@@ -5839,11 +5910,6 @@ button {
   left: 0;
   height: 100%;
   width: 100%;
-  display: none;
-}
-
-.where-to-buy__map.active {
-  display: block;
 }
 
 .where-to-buy__info {
@@ -5861,7 +5927,7 @@ button {
 
 @media (max-width: 1024px) {
   .where-to-buy__info {
-    margin-top: 40px;
+    margin-top: 20px;
   }
 }
 
@@ -6352,6 +6418,12 @@ button {
 
 .contacts .fp-tableCell {
   padding-top: 80px;
+}
+
+@media (max-width: 1024px) {
+  .contacts .fp-tableCell {
+    padding-top: 40px;
+  }
 }
 
 .contacts .container {
@@ -6904,13 +6976,7 @@ button {
 @media (max-width: 1024px) {
   .card {
     position: static;
-    padding: 0 20px 118px;
-  }
-}
-
-@media (max-width: 550px) {
-  .card {
-    padding: 0 0 118px;
+    padding: 0 20px 60px;
   }
 }
 
@@ -6949,6 +7015,12 @@ button {
 
 .card .content_block {
   margin-top: 30px;
+}
+
+@media (max-width: 1024px) {
+  .card .content_block {
+    margin-top: 15px;
+  }
 }
 
 .card .content_block p, .card .content_block b, .card .content_block i, .card .content_block a {
@@ -7254,7 +7326,10 @@ button {
   .card__button {
     position: relative;
     display: block;
-    margin: 55px auto 0;
+    margin: 25px auto 0;
+    padding: 10px;
+    font-size: 20px;
+    line-height: 23px;
   }
 }
 
@@ -7757,7 +7832,7 @@ button {
 
 @media (max-width: 1024px) {
   .card-modal {
-    padding: 35px 15px;
+    padding: 35px 0;
   }
 }
 
@@ -7781,7 +7856,7 @@ button {
 
 @media (max-width: 1024px) {
   .card-modal .card .gallery-thumbs {
-    max-width: 280px;
+    max-width: calc(100%);
   }
 }
 
@@ -7841,9 +7916,22 @@ button {
   margin: 20px 0 40px;
 }
 
+@media (max-width: 1024px) {
+  .card-modal .modal-values {
+    margin: 20px 0 15px;
+  }
+}
+
 .card-modal .card__button {
   cursor: pointer;
   position: static;
+}
+
+@media (max-width: 1024px) {
+  .card-modal .card__button {
+    margin-top: 25px;
+    padding: 10px;
+  }
 }
 
 .card-modal .card__price {
@@ -7882,6 +7970,12 @@ button {
 
 .card-modal .content_block {
   margin-top: 15px;
+}
+
+@media (max-width: 1024px) {
+  .card-modal .content_block {
+    margin-top: 0;
+  }
 }
 
 .card-modal .card__button--mobile {

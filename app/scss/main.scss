@@ -92,6 +92,7 @@ button{
     @include for-md(){
         display: flex;
         flex-direction: column;
+        order: -1;
     }
 }
 .rect {
@@ -173,7 +174,9 @@ button{
 .logo{
    width: 170px;
    height: 32px;
-
+    @include for-md(){
+        margin-right: auto;
+    }
    &__image{
        display: block;
        height: 100%;
@@ -191,6 +194,7 @@ button{
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
+    
   
 }
 .wrapper{
@@ -240,7 +244,7 @@ button{
        @include for-md(){
         display: inline-flex;
         color: #fff;
-        margin: 20px 0;
+        margin: 35px 0 10px;
        }
     }
     .header__phone-container:not(.on-mobile){
@@ -279,7 +283,7 @@ button{
     }
     @include for-sm(){
         width: 100%;
-        padding: 40px 20px;
+        padding: 40px 20px 55px;
     }
     &__list{
         padding: 55px 0 0 0;
@@ -353,7 +357,7 @@ button{
     background-color: transparent;
 
     @include for-md(){
-        margin-left: 0;
+        margin-left: auto;
     }
     &-value{
         width: 18px;
@@ -429,6 +433,7 @@ button{
         flex-wrap: wrap;
         @include for-md(){
             align-items: center;
+            flex-direction: row-reverse;
         }
     }
     &__link-modal{
@@ -482,7 +487,7 @@ button{
     }
     &__logo{
         @include for-md(){
-            margin-left: auto;
+           
         }
     }
 }
@@ -874,6 +879,19 @@ button{
             flex-direction: column;
         }
     }
+    &__modal-container{
+        @include for-md(){
+           &.active{
+            background-color: rgba(0,0,0,0.61);
+            z-index: 8000;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+           }
+        }
+    }
     &__left-side{
         min-height: 100vh;
         max-width: 710px;
@@ -899,7 +917,58 @@ button{
         position: relative;
         width: 100%;
         @include for-md(){
-            height: 300px;
+           height: 0;
+        }
+    }
+    &__helpbox{
+        display: none;
+        font-size: 17px;
+        line-height: 20px;
+       
+        box-sizing: border-box;
+        margin: 0 auto 20px;
+        @include for-md(){
+            display: block;
+            margin-top: 20px;
+        }
+    }
+    &__map-container{
+        display: none;
+        height: 100%;
+        position: relative;
+        &.active{
+            display: block;
+        }
+
+        @include for-md(){
+        position: fixed;
+        
+        width: 90%;
+        left: 5%;
+        top: calc(50% + 50px);
+        margin-top: -175px;
+        padding: 25px;
+        border-radius: 5px;
+        height: 350px;
+        padding: 25px;
+        box-sizing: border-box;
+        border-radius: 6px;
+         box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.61);
+         z-index: 8500;
+        }
+
+        &-close{
+            @include for-md(){
+                position: absolute;
+                bottom: 100%;
+                right: 0;
+                margin-bottom: 20px;
+                height: 20px;
+                width: 20px;
+                background: url(../images/icons/close_modal-wtihe.png) no-repeat center center;
+                background-size: contain;
+                cursor: pointer;
+            }
         }
     }
     &__map{
@@ -908,10 +977,12 @@ button{
         left: 0;
         height: 100%;
         width: 100%;
-        display: none;
-        &.active{
-            display: block;
-        }
+       
+        
+
+      
+      
+       
     }
     &__info{
         display: flex;
@@ -922,7 +993,7 @@ button{
             margin-top: 40px;
         }
         @include for-md(){
-            margin-top: 40px;
+            margin-top: 20px;
         }
         @include for-sm(){
             margin-right: 0;
@@ -1276,9 +1347,14 @@ button{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        
     }
     .fp-tableCell{
         padding-top: 80px;
+        @include for-md(){
+            padding-top: 40px;
+            
+        }
     }
     .container{
         display: flex;
@@ -1715,11 +1791,9 @@ button{
     }
     @include for-md{
         position: static;
-        padding: 0 20px 118px;
+        padding: 0 20px 60px;
     }
-    @include for-md-mob{
-        padding: 0 0 118px;
-    }
+  
     &__inner{
         position: relative;
         display: flex;
@@ -1746,6 +1820,9 @@ button{
     }
     .content_block{
         margin-top: 30px;
+        @include for-md(){
+            margin-top: 15px;
+        }
        p,b,i,a{
         color: #acacac;
        }
@@ -1988,7 +2065,11 @@ button{
         @include for-md{
             position: relative;
             display: block;
-            margin: 55px auto 0;
+            margin: 25px auto 0;
+            padding: 10px;
+            font-size: 20px;
+            line-height: 23px;
+           
         }
 
         &--mobile{
@@ -2378,10 +2459,11 @@ button{
        
     }
     @include for-md(){
-        padding: 35px 15px;
+        padding: 35px 0;
     }
     @include for-tiny-mob2(){
         max-width: 300px;
+
     }
     .card .gallery-thumbs{
         @include for-lg(){
@@ -2393,7 +2475,7 @@ button{
 
         }
         @include for-md(){
-            max-width: 280px;
+            max-width: calc(100%);
         }
     }
     .card__inner{
@@ -2436,10 +2518,17 @@ button{
         justify-content: space-between;
         width: 100%;
         margin: 20px 0 40px;
+        @include for-md(){
+            margin: 20px 0 15px;
+        }
     }
     .card__button{
         cursor: pointer;
         position: static;
+        @include for-md(){
+            margin-top: 25px;
+            padding: 10px;
+        }
     }
     .card__price{
         font-size: 36px;
@@ -2469,6 +2558,9 @@ button{
     }
     .content_block{
         margin-top: 15px;
+        @include for-md(){
+            margin-top: 0;
+        }
     }
     .card__button{
         &--mobile{

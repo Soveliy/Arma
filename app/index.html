@@ -40,9 +40,7 @@
                          </div>
                          
                          <div class="header__main-menu main-menu ">
-                            <button class="header__basket">
-                                <img class="header__basket-img" src="images/basket.png" alt="">
-                            </button>
+                           
                              <ul class="main-menu__list"  id="menu">
                                  <li class="main-menu__list-item">
                                      <a href="#hero" data-menuanchor="hero" class="main-menu__link">главная</a>
@@ -363,11 +361,16 @@
             </div>
         </section>
         <section class="where-to-buy section">
+           
+            <div class="where-to-buy__modal-container">
+                
+            </div>
             <div class="where-to-buy__row">
                <div class="where-to-buy__left-side">
                    <div class="section-title">
                      где купить
                    </div>
+                   <p class="where-to-buy__helpbox">Нажмите на город, чтобы посмотреть карту</p>
                    <div class="where-to-buy__info">
                        <div class="where-to-buy__info-item-container active">
                         <div class="where-to-buy__info-item info-item">
@@ -500,9 +503,21 @@
                    </div>
                </div>
                <div class="where-to-buy__right-side">
-                   <div id="map1" class="where-to-buy__map active"></div>
-                   <div id="map2" class="where-to-buy__map"></div>
-                   <div id="map3" class="where-to-buy__map"></div>
+                   <div class="where-to-buy__map-container active">
+                    <div class="where-to-buy__map-container-close"></div>
+                    <div id="map1" class="where-to-buy__map "></div>
+                   </div>
+                   <div class="where-to-buy__map-container">
+                    <div class="where-to-buy__map-container-close"></div>
+                    <div id="map2" class="where-to-buy__map"></div>
+                   </div>
+                   <div class="where-to-buy__map-container">
+                    <div class="where-to-buy__map-container-close"></div>
+                    <div id="map3" class="where-to-buy__map"></div>
+                   </div>
+                   
+                  
+                  
                </div>
 
             </div>
