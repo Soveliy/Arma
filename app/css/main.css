@@ -4921,6 +4921,7 @@ button {
 .logo {
   width: 170px;
   height: 32px;
+  margin-right: 20px;
 }
 
 @media (max-width: 1024px) {
@@ -5051,7 +5052,7 @@ button {
 @media (max-width: 768px) {
   .main-menu {
     width: 100%;
-    padding: 40px 20px 55px;
+    padding: 40px 20px;
   }
 }
 
@@ -5143,6 +5144,20 @@ button {
   padding: 0;
   outline: none;
   background-color: transparent;
+}
+
+@media screen and (min-width: 1024px) {
+  .header .header__basket--main {
+    background-color: #ff0000;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-sizing: border-box;
+    margin-right: 30px;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -5243,13 +5258,17 @@ button {
   }
 }
 
+.header__row--main {
+  align-items: center;
+}
+
 .header__link-modal {
   color: #3f3f3f;
   font-size: 18px;
   line-height: 24px;
   text-transform: uppercase;
   transition: .3s;
-  margin-left: auto;
+  align-self: flex-start;
   margin-right: 55px;
   cursor: pointer;
 }
@@ -5973,8 +5992,13 @@ button {
   }
 }
 
+.where-to-buy__info-item-container.active .info-item__city {
+  border-color: red;
+  color: red;
+}
+
 .info-item {
-  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 @media (max-width: 1024px) {
@@ -5985,11 +6009,15 @@ button {
 }
 
 .info-item__city {
+  display: inline-flex;
   font-size: 14px;
   line-height: 18px;
   font-weight: 700;
   text-transform: uppercase;
   margin-bottom: 10px;
+  transition: .3s;
+  cursor: pointer;
+  border-bottom: 1px solid transparent;
   transition: .3s;
 }
 
@@ -6976,7 +7004,7 @@ button {
 @media (max-width: 1024px) {
   .card {
     position: static;
-    padding: 0 20px 60px;
+    padding: 0 0 60px;
   }
 }
 
@@ -7918,7 +7946,7 @@ button {
 
 @media (max-width: 1024px) {
   .card-modal .modal-values {
-    margin: 20px 0 15px;
+    margin: 10px 0 15px;
   }
 }
 
@@ -7937,6 +7965,13 @@ button {
 .card-modal .card__price {
   font-size: 36px;
   line-height: 40px;
+}
+
+@media (max-width: 1024px) {
+  .card-modal .card__price {
+    font-size: 24px;
+    line-height: 27px;
+  }
 }
 
 .card-modal .card__subtitle {
