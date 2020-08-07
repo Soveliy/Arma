@@ -5044,7 +5044,7 @@ button {
     padding: 60px 20px 120px 60px;
     box-sizing: border-box;
     z-index: 900;
-    height: calc(90vh - 72px);
+    height: calc(100vh - 77px);
     overflow: auto;
   }
 }
@@ -6471,6 +6471,7 @@ button {
   .copy {
     font-size: 16px;
     line-height: 20px;
+    text-align: center;
   }
 }
 
@@ -7866,7 +7867,7 @@ button {
 
 @media (max-width: 380px) {
   .card-modal {
-    max-width: 300px;
+    max-width: calc(100%);
   }
 }
 
