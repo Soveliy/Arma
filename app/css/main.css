@@ -4475,6 +4475,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 }
 
 .content_box_site a:hover, .content_block a:hover, .text_poll a:hover {
+  color: red;
   text-decoration: underline;
 }
 
@@ -4534,7 +4535,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 }
 
 .content_box_site h1 a:hover, .content_block h1 a:hover, .text_poll h1 a:hover {
-  color: #000000;
+  color: red;
 }
 
 .content_box_site h2, .content_block h2, .text_poll h2 {
@@ -4553,7 +4554,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 }
 
 .content_box_site h2 a:hover, .content_block h2 a:hover, .text_poll h2 a:hover {
-  color: #000000;
+  color: red;
 }
 
 .content_box_site h3, .content_block h3, .text_poll h3 {
@@ -4572,7 +4573,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 }
 
 .content_box_site h3 a:hover, .content_block h3 a:hover, .text_poll h3 a:hover {
-  color: #3f3f3f;
+  color: red;
 }
 
 .content_box_site h4, .content_block h4, .text_poll h4 {
@@ -4591,7 +4592,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 }
 
 .content_box_site h4 a:hover, .content_block h4 a:hover, .text_poll h4 a:hover {
-  color: #000000;
+  color: red;
 }
 
 .content_box_site h5, .content_block h5, .text_poll h5 {
@@ -4610,7 +4611,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 }
 
 .content_box_site h5 a:hover, .content_block h5 a:hover, .text_poll h5 a:hover {
-  color: #000000;
+  color: red;
 }
 
 .content_box_site h6, .content_block h6, .text_poll h6 {
@@ -4629,7 +4630,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 }
 
 .content_box_site h6 a:hover, .content_block h6 a:hover, .text_poll h6 a:hover {
-  color: #000000;
+  color: red;
 }
 
 .content_box_site .wp-caption, .content_block .wp-caption, .text_poll .wp-caption {
@@ -5131,6 +5132,10 @@ button {
   }
 }
 
+.header.header--red {
+  padding: 25px 0;
+}
+
 @media (max-width: 1024px) {
   .header .container {
     padding: 0;
@@ -5182,7 +5187,7 @@ button {
 }
 
 .header--red {
-  padding-bottom: 43px;
+  padding: 40px 0;
   background-color: #ff0000;
 }
 
@@ -5213,6 +5218,10 @@ button {
   .header--red .main-menu li + li {
     margin-left: 0;
   }
+}
+
+.header--red .main-menu__list {
+  padding-top: 25px;
 }
 
 .header--red .main-menu__link {
@@ -5382,7 +5391,7 @@ button {
 
 @media (max-width: 1024px) {
   .hero__header {
-    padding: 20px;
+    padding: 20px !important;
   }
 }
 
@@ -5993,7 +6002,7 @@ button {
 }
 
 .where-to-buy__info-item-container.active .info-item__city {
-  border-color: red;
+  text-decoration: underline;
   color: red;
 }
 
@@ -6337,6 +6346,7 @@ button {
 }
 
 .contacts {
+  padding: 50px 0;
   position: relative;
 }
 
@@ -6344,6 +6354,7 @@ button {
   font-size: 34px;
   line-height: 54px;
   color: #acacac;
+  margin: 50px 0;
 }
 
 .contacts__content a {
@@ -6477,6 +6488,14 @@ button {
 
 .copy span {
   color: #7e7e7e;
+}
+
+.copy a {
+  transition: .3s;
+}
+
+.copy a:hover {
+  color: red;
 }
 
 .social {
@@ -8470,6 +8489,18 @@ button {
 }
 
 .footer {
+  width: 100%;
+}
+
+.footer.fp-auto-height {
+  height: auto !important;
+}
+
+.footer.fp-auto-height .fp-tableCell {
+  height: auto !important;
+}
+
+.footer.fp-auto-height .contacts__bottom {
   width: 100%;
 }
 

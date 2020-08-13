@@ -344,6 +344,9 @@ button{
     z-index: 9990;
     box-sizing: border-box;
    }
+   &.header--red{
+       padding: 25px 0;
+   }
    .container{
        @include for-md(){
            padding: 0;
@@ -390,12 +393,13 @@ button{
     }
 }
     &--red{
-        padding-bottom: 43px;
+        padding: 40px 0;
         background-color: $red;
         @include for-md(){
             background-color: #7f7f7f;
             padding: 40px 0;
         }
+        
         .main-menu{
            display: flex;
           justify-content: flex-end;
@@ -411,6 +415,9 @@ button{
                     margin-left: 0;
                 }
             }
+        }
+        .main-menu__list{
+            padding-top: 25px;
         }
         .main-menu__link{
             color: $white;
@@ -555,7 +562,7 @@ button{
             padding-top: 40px;
         }
             @include for-md(){
-                padding: 20px;
+                padding: 20px !important;
             }
     }
     &__left{
@@ -1045,7 +1052,7 @@ button{
         }
         &.active{
             .info-item__city{
-                border-color: red;;
+               text-decoration: underline;
                 color: red;
             }
         }
@@ -1291,7 +1298,7 @@ button{
     }
 }
 .contacts {
-
+    padding: 50px 0;
     position: relative;
    
     &__content{
@@ -1299,6 +1306,7 @@ button{
         font-size: 34px;
         line-height: 54px;
         color: $grey;
+        margin: 50px 0;
         a{
             color: $grey;
             text-decoration: none;
@@ -1409,6 +1417,12 @@ button{
     span{
        
         color: #7e7e7e;
+    }
+    a{
+        transition: .3s;
+        &:hover{
+            color: red;
+        }
     }
 }
 .social{
@@ -2904,6 +2918,16 @@ button{
 
 .footer{
     width: 100%;
+
+    &.fp-auto-height{
+        height: auto !important;
+        .fp-tableCell{
+            height: auto !important;
+        }
+        .contacts__bottom{
+            width: 100%;
+        }
+    }
 }
 
 .box_content_modal__page_block.modal_textinfo_class{

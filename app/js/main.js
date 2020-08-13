@@ -15,7 +15,7 @@ $(window).on('resize', function(event){
 });
 $('.where-to-buy__modal-container,.where-to-buy__map-container-close').click(function(){
   $(".where-to-buy__modal-container").removeClass("active")
-  $(".where-to-buy__info").removeClass("active");
+  $(".where-to-buy__info,.where-to-buy__info-item-container").removeClass("active");
   $('.where-to-buy__map-container').removeClass('active');
 });
 
@@ -69,10 +69,10 @@ new WOW().init();
     scrollingSpeed: 1000,
     
     scrollHorizontally: false,
-    
+    fitToSection:true,
 
    
-    anchors: ['hero', 'about', 'features', 'catalog', 'where-to-buy', 'contacts']
+    anchors: ['hero', 'features', 'catalog', 'footer']
     });
     
      
