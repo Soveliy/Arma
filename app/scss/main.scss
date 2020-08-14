@@ -344,6 +344,15 @@ button{
     z-index: 9990;
     box-sizing: border-box;
    }
+   &:not(.header--red){
+    .main-menu__link:hover{
+        color: red;
+        text-shadow: 0 0 0.9px red, 0 0 0.9px red, 0 0 0.9px red;
+    }
+    .header__phone-link:hover,.header__link-modal:hover{
+        color: red;
+    }
+   }
    &.header--red{
        padding: 25px 0;
    }
@@ -359,6 +368,14 @@ button{
     padding: 0;
     outline: none;
     background-color: transparent;
+    img{
+        transition: .3s;
+    }
+    &:hover{
+        img{
+            transform: scale(.9);
+        }
+    }
     &--main{
       @media screen and (min-width:1024px){
         background-color: #ff0000;
@@ -1076,7 +1093,7 @@ button{
         border-bottom: 1px solid transparent;
         transition: .3s;
         &:hover{
-            opacity: .7;
+            color: red;
         }
         @include for-big-h(){
             font-size: 13px;
@@ -1109,7 +1126,7 @@ button{
         a{
             transition: .3s;
             &:hover{
-                opacity: .6;
+              color: red;
             }
         }
 
@@ -1312,7 +1329,7 @@ button{
             text-decoration: none;
             transition: .3s;
             &:hover{
-                color: $black;
+                color: red;
             }
         }
        @include for-md(){
@@ -1343,6 +1360,9 @@ button{
         cursor: pointer;
         width: fit-content;
         text-transform: uppercase;
+        &:hover{
+            color: red;
+        }
         @include for-md(){
             font-size: 20px;
             line-height: 24px;
